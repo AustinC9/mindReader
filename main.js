@@ -36,43 +36,43 @@ function updatePage() {
     if (state === 1) {
         header.textContent = "Bet you $1000 I can read your mind";
         small.textContent = "Go ahead, click next";
-        btn1.style.display = "Next";
+        btn1.style.display = "initial";
         document.getElementById("btn2").style.display= "none";
     }
     else if (state === 2) {
         header.textContent = "Pick a number from 01 - 99";
         small.textContent = "When you have your number click next!";
-        document.getElementById("btn").style.display = "Proceed";
+        document.getElementById("btn").textContent = "Proceed";
         document.getElementById("btn2").style.display= "initial";
     }
     else if (state === 3) {
-        header.textContent = "Add Both digits together to get a new number";
+        header.textContent = "Add both digits together to get a new number";
         document.getElementById("Small").innerHTML = "Ex: 44 is 4 + 4 = 8 <br> Click next to proceed";
-        document.getElementById("btn").style.display = "Carry on";
+        document.getElementById("btn").textContent = "Carry on";
         document.getElementById("btn2").style.visibility= "Initial";
 
     }
     else if (state === 4) {
         header.textContent = "Subtract your new number from the original number";
         document.getElementById("Small").innerHTML = "Ex: 44-8 = 36 <br> Click next to proceed";
-        document.getElementById("btn").style.display = "Go on";
+        document.getElementById("btn").style.textContent = "Go on";
         document.getElementById("btn2").style.display= "Show";
     }
     else if (state === 5) {
         let str = randomSym();
         header.innerHTML = str;
         document.getElementById("Small").innerHTML = "Find your new number <br> Note the symbol beside the number";
-        document.getElementById("btn").style.display = "Forward";
+        document.getElementById("btn").textContent = "Forward";
         document.getElementById("btn2").style.display= "Show";
     }
     else if (state === 6) {
         header.innerHTML = "PAY UP";
         document.getElementById("Small").innerHTML = "Your symbol is: <br>"
-        document.getElementById("btn").style.display = "Pay Me";
+        document.getElementById("btn").textContent = "Pay Me";
         document.getElementById("btn2").style.display= "Show";
     }
     else if (state === 7) {
-        header.innerHTML = symSelect;
+        header.innerHTML = "Your symbol is: <br>" + symSelect;
         document.getElementById("btn").style.display = "None";
         document.getElementById("btn2").style.display= "Show";
     }
